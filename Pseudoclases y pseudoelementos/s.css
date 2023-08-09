@@ -18,11 +18,6 @@ h1:hover{
     color:black;
 }
 
-h1:after{
-    color:black;
-    content: " Hello!!!!";
-}
-
 div + h1 {
     color:purple;
 }
@@ -34,7 +29,6 @@ body div p{
 .myDivLeft{
     color:red;
     position: absolute;
-    font-size: 30px;
     position: absolute;
     top: 50%;
     left: 0;
@@ -55,4 +49,9 @@ div > h1{
 .image img{
     width: 400px;
     height: 350px;
+}
+
+.image:after{
+    color:black;
+    content: " Hello!!!!";
 }
