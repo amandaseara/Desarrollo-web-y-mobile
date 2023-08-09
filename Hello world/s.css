@@ -1,0 +1,24 @@
+h1{
+    color:pink;
+    font-size: 60px;
+    text-align:center;
+}
+
+.myDiv{
+    color:blueviolet;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    top: 65%;
+}
+
+.image{
+    position: relative;
+    left: 460px;
+    bottom: 50px;
+}
+
+.image img{
+    width: 400px;
+    height: 350px;
+}
