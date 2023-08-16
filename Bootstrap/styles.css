@@ -4,6 +4,7 @@ body {
 
 .darkBlue {
     background-color: rgb(43, 124, 206);
+    max-height: 60px;
 }
 
 /*///////////////MENU//////////////////////////*/
