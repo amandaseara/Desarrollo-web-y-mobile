@@ -8,6 +8,10 @@ body {
 
 /*///////////////MENU//////////////////////////*/
 
+.rowMenu div i,.rowMenu div i2{
+    border-radius: 3px;
+}
+
 .iconsL i{
     color:white;
     font-size: 20px;
@@ -21,7 +25,6 @@ body {
     color:white;
     font-size: 20px;
     background: rgb(84, 160, 255);
-    transform:rotateX(180deg); /*??????????????????????????*/
     padding-left: 150px;
     padding-right: 3px;
     margin: 1;
@@ -63,6 +66,11 @@ body {
 
 /*///////////////OPTIONS//////////////////////////*/
 
+.rowOptions div i, .rowOptions .text3 p{
+    border-radius: 3px;
+    border-radius: 3px;
+}
+
 .text1{
     border-right: 1px solid white;
 }
@@ -99,7 +107,7 @@ body {
 }
 
 .text3{
-    border-right: 1px solid white;    
+    border-right: 1px solid white;
 }
 
 .text3 i{
@@ -132,8 +140,19 @@ body {
 
 /*//////////////////////LISTS///////////////////////*/
 
+.rowLists div{
+    border-radius: 10px;
+}
+
 .list {
     background-color: rgb(212, 212, 212);
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .list h1{
@@ -146,7 +165,6 @@ body {
 .list i{
     color:rgb(131, 149, 167);
     font-size: 18px;
-    text-align: right; /*????????????????????????????????????????????*/
 }
 
 .list p{
