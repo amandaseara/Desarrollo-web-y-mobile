@@ -13,7 +13,7 @@
             <div class="col-sm-5 iconsL">
                 <i id="home" class="bi bi-house-door"></i>
                 <i id="boards" class="bi bi-trello"><strong>  Boards</strong></i>
-                <i2 class="bi bi-search"></i2>
+                <i2 id="search" class="bi bi-search"></i2>
             </div>
 
             <div class="col-sm-2 trello">
@@ -59,31 +59,34 @@
         <!-- LISTS -->
         <div class="row m-1 rowLists">
             <div class="col-md-3 m-1 p-1 list">
-                <div class="title">
+                <div class="titleList">
                     <h1><strong>To do</strong></h1>
                     <i class="bi bi-three-dots"></i>
                 </div>
-                <p>+ Add a card</p>
+                <div id="cardToDo"></div>
+                <p id="addToDo">+ Add a card</p>
             </div>
 
             <div class="col-md-3 m-1 p-1 list">
-                <div class="title">
+                <div class="titleList">
                     <h1><strong>In progress</strong></h1>
                     <i class="bi bi-three-dots"></i>
                 </div>
-                <p>+ Add a card</p>
+                <div id="cardInProgress"></div>
+                <p id="addInProgress">+ Add a card</p>
             </div>
 
             <div class="col-md-3 m-1 p-1 list">
-                <div class="title">
+                <div class="titleList">
                     <h1><strong>Done</strong></h1>
                     <i class="bi bi-three-dots"></i>
                 </div>
-                <p>+ Add a card</p>
+                <div id="cardDone"></div>
+                <p id="addDone">+ Add a card</p>
             </div>
             
             <div class="col-md-2 m-1 darkBlue">
-                <p>+ Add another list</p>
+                <p id="addList">+ Add another list</p>
             </div>
         </div>
     </div>
