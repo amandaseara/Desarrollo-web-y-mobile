@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>TestTrello</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- MENU -->
+        <div class="row darkBlue p-1 rowMenu">
+            <div class="col-sm-5 iconsL">
+                <i id="home" class="bi bi-house-door"></i>
+                <i id="boards" class="bi bi-trello"><strong>  Boards</strong></i>
+                <i2 id="search" class="bi bi-search"></i2>
+            </div>
+
+            <div class="col-sm-2 trello">
+                <i class="bi bi-trello"><strong>  Trello</strong></i>
+            </div> 
+
+            <div class="col-sm-3 iconsR"></div>
+
+            <div class="col-sm-2 iconsR">
+                <i class="bi bi-plus"></i>
+                <i class="bi bi-info-circle"></i>
+                <i2 class="bi bi-bell"></i2>
+                <i3 class="bi bi-p-circle-fill"></i3>
+            </div>   
+        </div>
+        <!-- OPTIONS -->
+        <div class="row mt-2 ml-2 rowOptions">
+            <div class="col-md-3 text1">
+                <p><strong>Company Website </strong></p>
+                <i id="fav" class="bi bi-star"></i>
+            </div>
+            <div class="col-md-1 text2">
+                <p>Personal</p>
+            </div>
+            <div class="col-md-1 text2">
+                <i class="bi bi-lock"></i>
+                <p>Private</p>
+            </div>
+            <div class="col-md-1 text3">
+                <i class="bi bi-p-circle-fill"></i>
+                <p>Invite</p>
+            </div>
+            <div class="col-md-2 text4">
+                <i class="bi bi-calendar-check"></i>
+                <p>15h 20m Total</p>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2 text4">
+                <i class="bi bi-three-dots"></i>
+                <p>Show Menu</p>
+            </div>
+        </div>
+        <!-- LISTS -->
+        <div class="row m-1 rowLists">
+            <div class="col-md-3 m-1 p-1 list">
+                <div class="titleList">
+                    <h1><strong>To do</strong></h1>
+                    <i class="bi bi-three-dots"></i>
+                </div>
+                <div id="cardToDo">
+                    <div class="card"></div>
+                </div>
+                <p id="addToDo" onclick="addCardInBucket('cardToDo')">+ Add a card</p>
+            </div>
+
+            <div class="col-md-3 m-1 p-1 list">
+                <div class="titleList">
+                    <h1><strong>In progress</strong></h1>
+                    <i class="bi bi-three-dots"></i>
+                </div>
+                <div id="cardInProgress">
+                    <div class="card"></div>
+                </div>
+                <p id="addInProgress" onclick="addCardInBucket('cardInProgress')">+ Add a card</p>
+            </div>
+
+            <div class="col-md-3 m-1 p-1 list">
+                <div class="titleList">
+                    <h1><strong>Done</strong></h1>
+                    <i class="bi bi-three-dots"></i>
+                </div>
+                <div id="cardDone">
+                    <div class="card"></div>
+                </div>
+                <p id="addDone"onclick="addCardInBucket('cardDone')">+ Add a card</p>
+            </div>
+            
+            <div class="col-md-2 m-1 darkBlue">
+                <p id="addList">+ Add another list</p>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
