@@ -188,17 +188,26 @@ body {
     font-size: 18px;
 }
 
-#cardToDo p {
-    color: black;
-    font-size: 18px;
+.accordion-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#cardInProgress p {
+.accordion-body p {
     color: black;
-    font-size: 18px;
+    font-size: 12px;
 }
 
-#cardDone p {
-    color: black;
-    font-size: 18px;
+.accordion-body div {
+    display: flex;
+    width: 96%;
+    flex-direction: row-reverse;
+}
+
+.accordion-body div i {
+    cursor: pointer;
+    color: rgb(131, 149, 167);
+    font-size: 15px;
 }

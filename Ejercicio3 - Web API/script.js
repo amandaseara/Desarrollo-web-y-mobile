@@ -1,4 +1,3 @@
-
 /*/////////////////////MENU///////////////////////////*/
 
 /*Icon home*/
@@ -57,8 +56,8 @@ myButtonAddList.addEventListener('click', handleClickAddList);
 /*to do list*/
 
 const url = "https://mocki.io/v1/4d8d13b5-2e4a-4970-b7ff-6b30d4b7065a";
-var registro = 0;
-console.log(registro);
+let registro = 0;
+let cardId = 0;
 
 async function fetchData() {
     try {
@@ -75,32 +74,40 @@ async function createCard() {
 
     let htmlData = 
     `
-        <div id="Card-${registro}" class="TheCard"">
-            <div class="card text-bg-light mb-3 text-center w-90">
-                <div class="card-header">${payload["registro"][registro].cardHeader}</div>
-                <div>
-                    <span class="material-symbols-outlined" 
-                        onclick="deleteCardOfWorld('Card-${registro}')">
-                        delete
-                    </span>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">${payload["registro"][registro].cardTitle}</h5>
-                    <p class="card-text">${payload["registro"][registro].cardText}</p>
+        <div id="Card-${cardId}" class="TheCard"">
+            <div class="accordion accordion-flush">
+                <div class="accordion-item">
+                    <div class="accordion-header" id="flush-heading${cardId}">
+                        <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${cardId}" aria-expanded="false" aria-controls="flush-collapse${cardId}">
+                            ${payload["registro"][registro].cardTitle}
+                        </div>
+                    </div>
+                    <div id="flush-collapse${cardId}" class="accordion-collapse collapse" aria-labelledby="flush-heading${cardId}" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>${payload["registro"][registro].cardText}</p>
+                            <div>
+                                <i class="bi bi-trash" onclick="deleteCard('Card-${cardId}')"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     `;
     registro < 9 ? ++registro : registro = 0;
+    cardId++;
     return htmlData
     
 }
 
-//funcion que recibe la solicitud de una nueva card.
 async function addCardInBucket(list) {
-    const dropList = document.getElementById(list);
-    const theCard = dropList.getElementsByClassName("card")[0];
+    const listCards = document.getElementById(list);
+    const theCard = listCards.getElementsByClassName("card")[0];
     const element = await createCard();
     theCard.insertAdjacentHTML("beforebegin" ,element);
 }
 
+function deleteCard(cardId){
+    const theCardRemove = document.getElementById(cardId);
+    theCardRemove.remove();
+}
