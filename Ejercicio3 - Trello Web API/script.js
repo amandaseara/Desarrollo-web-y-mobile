@@ -76,9 +76,9 @@ async function createCard() {
     `
         <div id="Card-${cardId}" class="TheCard"">
             <div class="accordion accordion-flush">
-                <div class="accordion-item">
+                <div class="accordion-item m-1 rounded-3">
                     <div class="accordion-header" id="flush-heading${cardId}">
-                        <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${cardId}" aria-expanded="false" aria-controls="flush-collapse${cardId}">
+                        <div class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${cardId}" aria-expanded="false" aria-controls="flush-collapse${cardId}">
                             ${payload["registro"][registro].cardTitle}
                         </div>
                     </div>
