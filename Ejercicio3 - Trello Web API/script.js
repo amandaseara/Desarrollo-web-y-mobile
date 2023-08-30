@@ -74,7 +74,7 @@ async function createCard() {
 
     let htmlData = 
     `
-        <div id="Card-${cardId}" class="TheCard"">
+        <div id="Card-${cardId}" class="TheCard card draggable" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
             <div class="accordion accordion-flush">
                 <div class="accordion-item m-1 rounded-3">
                     <div class="accordion-header" id="flush-heading${cardId}">
@@ -110,4 +110,42 @@ async function addCardInBucket(list) {
 function deleteCard(cardId){
     const theCardRemove = document.getElementById(cardId);
     theCardRemove.remove();
+}
+
+/*Drag and drop*/
+
+//ESTRUCTURAS DE CONTROL DE EVENTOS
+
+let draggedCard = null;
+
+//Comienza el arrastre de una tarjeta
+function dragStart(event) {
+    draggedCard = event.target;
+    event.dataTransfer.setData("text/plain", event.target.id);
+}
+
+//Termina el arrastre de la tarjeta
+function dragEnd() {
+    setTimeout(() => {
+        if (draggedCard !== null) {
+            draggedCard.style.display = 'block';
+            draggedCard = null;
+        }
+    }, 0);
+}
+
+//Evita el comportamiento predeterminado, que normalmente no permite soltar elementos dentro de otros elementos
+function dragOver(event) {
+    event.preventDefault();
+}
+
+//Añade el elemento
+function drop(event, list) {
+    event.preventDefault();
+    const listCards = document.getElementById(list);
+    const theCard = listCards.getElementsByClassName("card")[0];
+    if (draggedCard !== null) {
+        theCard.insertAdjacentHTML("beforebegin", draggedCard.outerHTML);
+        draggedCard.remove();
+    }
 }

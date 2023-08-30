@@ -65,7 +65,7 @@
         </div>
         <!-- LISTS -->
         <div class="row m-1 rowLists">
-            <div class="col-md-3 m-1 p-1 list">
+            <div class="col-md-3 m-1 p-1 list" ondragover="dragOver(event)" ondrop="drop(event, 'cardToDo')">
                 <div class="titleList">
                     <h1><strong>To do</strong></h1>
                     <i class="bi bi-three-dots"></i>
@@ -76,7 +76,7 @@
                 <p id="addToDo" onclick="addCardInBucket('cardToDo')">+ Add a card</p>
             </div>
 
-            <div class="col-md-3 m-1 p-1 list">
+            <div class="col-md-3 m-1 p-1 list" ondragover="dragOver(event)" ondrop="drop(event, 'cardInProgress')">
                 <div class="titleList">
                     <h1><strong>In progress</strong></h1>
                     <i class="bi bi-three-dots"></i>
@@ -87,7 +87,7 @@
                 <p id="addInProgress" onclick="addCardInBucket('cardInProgress')">+ Add a card</p>
             </div>
 
-            <div class="col-md-3 m-1 p-1 list">
+            <div class="col-md-3 m-1 p-1 list" ondragover="dragOver(event)" ondrop="drop(event, 'cardDone')">
                 <div class="titleList">
                     <h1><strong>Done</strong></h1>
                     <i class="bi bi-three-dots"></i>
