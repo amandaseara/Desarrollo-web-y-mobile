@@ -9,6 +9,7 @@ import { GetGamesService } from '../service/get-games.service';
 export class GamesComponent implements OnInit{
 
   games: any;
+  selectedGame: any;
 
   constructor(private gameService: GetGamesService){}
   ngOnInit(): void {
@@ -18,5 +19,13 @@ export class GamesComponent implements OnInit{
   getGames(){
     this.gameService.getGames().subscribe(response => this.games = response.results);
   }
+
+  selectGame(game: any) {
+    this.selectedGame = game;
+  }
   
+  closeGame(){
+    this.selectedGame = null;
+  }
+
 }

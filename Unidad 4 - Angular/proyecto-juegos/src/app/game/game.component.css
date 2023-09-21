@@ -1,0 +1,24 @@
+.card {
+    position: relative;
+    width: 200px;
+    height: 220px;
+    border-radius: 5px;
+    border: 1px solid rgb(99, 110, 114);
+    background-color: rgb(178, 190, 195);
+    padding: 10px;
+    margin: 10px;
+}
+  
+.cardImg {
+    max-width: 100%;
+    max-height: 150px;
+    border-radius: 5px;
+    border: 1px solid rgb(99, 110, 114);
+}
+
+.cardName {
+    position: absolute;
+    width: 94%;
+    text-align: center;
+    bottom: 10px;
+}

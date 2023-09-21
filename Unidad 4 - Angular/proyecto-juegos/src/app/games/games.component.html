@@ -1,6 +1,7 @@
-<p>gameList</p>
-<ul>
-    <li *ngFor="let game of games">
-        {{game.name}}
-    </li>
-</ul>
+<div class="cardContainer">
+    <app-game *ngFor="let game of games" [game]="game" (click)="selectGame(game)"></app-game>
+    <div class="overlay" *ngIf="selectedGame"></div>
+    <div class="details" *ngIf="selectedGame">
+        <app-game-detail [selectedGame]="selectedGame" (closeGame)="closeGame()"></app-game-detail>
+    </div>
+</div>
