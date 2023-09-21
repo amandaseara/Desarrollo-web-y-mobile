@@ -23,3 +23,11 @@
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 998;
 }
+
+.search {
+    text-align: center;
+    font-size: 20px;
+    background-color: rgb(178, 190, 195);
+    padding-top: 2px;
+    padding-bottom: 4px;
+}

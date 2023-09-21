@@ -1,4 +1,15 @@
+<div class="search">
+    <label for="search-box">Search:</label>
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+</div>
 <div class="cardContainer">
+    <app-game *ngFor="let game of gamesSearch" [game]="game" (click)="selectGame(game)"></app-game>
+    <div class="overlay" *ngIf="selectedGame"></div>
+    <div class="details" *ngIf="selectedGame">
+        <app-game-detail [selectedGame]="selectedGame" (closeGame)="closeGame()"></app-game-detail>
+    </div>
+</div>
+<div class="cardContainer" *ngIf="searchBox.value.trim() === ''">
     <app-game *ngFor="let game of games" [game]="game" (click)="selectGame(game)"></app-game>
     <div class="overlay" *ngIf="selectedGame"></div>
     <div class="details" *ngIf="selectedGame">
