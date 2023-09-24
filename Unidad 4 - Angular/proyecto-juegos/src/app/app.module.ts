@@ -10,6 +10,7 @@ import { GameComponent } from './game/game.component';
 import { GameDetailComponent } from './game-detail/game-detail.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MenuComponent } from './menu/menu.component';
     GameComponent,
     GameDetailComponent,
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    FooterComponent
   ],
   imports: [
     HttpClientModule,
