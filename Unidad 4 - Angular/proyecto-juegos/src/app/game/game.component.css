@@ -7,6 +7,7 @@
     background-color: rgb(178, 190, 195);
     padding: 10px;
     margin: 10px;
+    cursor: pointer;
 }
   
 .cardImg {
@@ -21,4 +22,9 @@
     width: 94%;
     text-align: center;
     bottom: 10px;
+}
+
+.cardName h2{
+    color: black;
+    font-size: 20px;
 }

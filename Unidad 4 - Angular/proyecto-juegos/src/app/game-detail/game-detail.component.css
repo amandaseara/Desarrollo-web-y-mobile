@@ -22,11 +22,13 @@
 .nameDetail {
     width: 94%;
     text-align: center;
+    color: black;
 }
 
 .details {
+    color: black;
     position: absolute;
-    font-size: 15px;
+    font-size: 13px;
     bottom: 0px;
     left: 80%;
     transform: translate(-20%, 0);

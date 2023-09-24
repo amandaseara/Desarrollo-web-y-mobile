@@ -8,13 +8,17 @@ import { GamesComponent } from './games/games.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GameComponent } from './game/game.component';
 import { GameDetailComponent } from './game-detail/game-detail.component';
+import { HeaderComponent } from './header/header.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GamesComponent,
     GameComponent,
-    GameDetailComponent
+    GameDetailComponent,
+    HeaderComponent,
+    MenuComponent
   ],
   imports: [
     HttpClientModule,
