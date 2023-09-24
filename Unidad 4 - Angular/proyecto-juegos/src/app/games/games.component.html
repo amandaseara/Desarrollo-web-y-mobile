@@ -1,6 +1,5 @@
 <div class="search">
-    <label for="search-box">Search:</label>
-    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" placeholder="Search" />
 </div>
 <div class="cardContainer">
     <app-game *ngFor="let game of gamesSearch" [game]="game" (click)="selectGame(game)"></app-game>

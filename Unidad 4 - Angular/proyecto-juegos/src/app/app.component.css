@@ -1,0 +1,14 @@
+.menuD{
+    background-color: rgb(99, 110, 114);
+}
+
+.menuD button{
+    font-size: 20px;
+    background-color: rgb(99, 110, 114);
+    border: none;
+    cursor: pointer;
+}
+
+.row{
+    background-color: rgb(140, 148, 151);
+}
