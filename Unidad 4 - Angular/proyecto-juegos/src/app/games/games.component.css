@@ -3,8 +3,7 @@
     display: flex;
     flex-wrap: wrap; /*Salto de linea*/
     justify-content: space-between;
-    border: 1px solid rgb(99, 110, 114);
-    background-color: rgb(140, 148, 151);
+    background-color: black;
 }
 
 .details {
@@ -29,8 +28,7 @@
 .search {
     text-align: center;
     font-size: 15px;
-    background-color: rgb(140, 148, 151);
+    background-color: black;
     padding-bottom: 4px;
-    padding-top: 2px;
-    border: 1px solid rgb(99, 110, 114);
+    padding-top: 10px;
 }

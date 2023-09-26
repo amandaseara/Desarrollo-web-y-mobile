@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, map, of, tap } from 'rxjs';
+import { Observable, map, of, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,10 @@ export class GetGamesService {
 
   public getGames(): Observable<any>{
     return this.http.get<any>("https://api.rawg.io/api/games?key=1d44a7be87794112afbd4072eb27ffdd");
+  }
+
+  public getDetails(id:string): Observable<any>{
+    return this.http.get<any>("https://api.rawg.io/api/games/"+id+"?key=1d44a7be87794112afbd4072eb27ffdd");
   }
 
   searchGames(term: string): Observable<any> {

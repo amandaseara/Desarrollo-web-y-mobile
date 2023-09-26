@@ -1,13 +1,14 @@
 h2 {
-    color:black;
+    color:white;
     font-size: 19px;
     padding-left: 15px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .options i {
     font-size: 17px;
-    color: black;
+    color: white;
     padding-left: 40px;
     display: block;
     padding-top: 4px;

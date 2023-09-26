@@ -1,17 +1,17 @@
 <div class="search">
-    <input #searchBox id="search-box" (input)="search(searchBox.value)" placeholder="Search" />
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" placeholder="Search"/>
 </div>
 <div class="cardContainer">
     <app-game *ngFor="let game of gamesSearch" [game]="game" (click)="selectGame(game)"></app-game>
     <div class="overlay" *ngIf="selectedGame"></div>
     <div class="details" *ngIf="selectedGame">
-        <app-game-detail [selectedGame]="selectedGame" (closeGame)="closeGame()"></app-game-detail>
+        <app-game-modal [selectedGame]="selectedGame" (closeGame)="closeGame()"></app-game-modal>
     </div>
 </div>
 <div class="cardContainer" *ngIf="searchBox.value.trim() === ''">
     <app-game *ngFor="let game of games" [game]="game" (click)="selectGame(game)"></app-game>
     <div class="overlay" *ngIf="selectedGame"></div>
     <div class="details" *ngIf="selectedGame">
-        <app-game-detail [selectedGame]="selectedGame" (closeGame)="closeGame()"></app-game-detail>
+        <app-game-modal [selectedGame]="selectedGame" (closeGame)="closeGame()"></app-game-modal>
     </div>
 </div>

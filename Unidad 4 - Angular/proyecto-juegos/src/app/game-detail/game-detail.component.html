@@ -1,7 +1,3 @@
-<div *ngIf="selectedGame" class="gameDetail">
-    <button class="closeButton" (click)="closeGame.emit()">X</button>
-    <h2 class="nameDetail">{{selectedGame.name}}</h2>
-    <img class="imgDetail" [src]="selectedGame.background_image" alt="{{selectedGame.name}} image">
-    <p class="details">Released: {{selectedGame.released}}</p>
+<div class="description">
+    {{ getDescriptionText(description) }}
 </div>
-

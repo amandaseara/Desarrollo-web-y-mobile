@@ -1,0 +1,32 @@
+.gameDetail{
+    position: relative;
+    width: 700px;
+    border-radius: 5px;
+    border: 1px solid rgb(99, 110, 114);
+    background-color: rgb(178, 190, 195);
+    padding: 10px;
+    margin: 10px;
+}
+
+.imgDetail {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 5px;
+    border: 1px solid rgb(99, 110, 114);
+}
+
+.nameDetail {
+    text-align: center;
+    color: black;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    background-color: rgb(178, 190, 195);
+    border: 1px solid rgb(99, 110, 114);
+    cursor: pointer;
+    color: rgb(99, 110, 114);
+}

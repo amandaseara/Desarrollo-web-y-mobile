@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GetGamesService } from '../service/get-games.service';
 import { Subject, debounceTime, switchMap } from 'rxjs';
 
-@Component({
+@Component({ 
   selector: 'app-games',
   templateUrl: './games.component.html',
   styleUrls: ['./games.component.css']
