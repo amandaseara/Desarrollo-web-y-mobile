@@ -10,7 +10,7 @@
     display: flex;
   }
   
-  .heroes button {
+  .heroes button { 
     flex: 1;
     cursor: pointer;
     position: relative;

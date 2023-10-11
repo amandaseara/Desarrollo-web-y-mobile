@@ -1,0 +1,6 @@
+.cardContainer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; /*Salto de linea*/
+    justify-content: space-between;
+}

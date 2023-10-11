@@ -1,0 +1,14 @@
+<div class="cardContainer">
+    <app-jugador *ngFor="let jugador of jugadores" [jugador]="jugador" [routerLink]="['/jugador', jugador.id]"></app-jugador>
+</div>
+<div>   
+    <label for="nuevo-jugador">Nombre Jugador: </label>
+    <input id="nuevo-jugador" #nombre />
+    <label for="posicion-jugador">Posicion: </label>
+    <input id="posicion-jugador" #posicion />
+    <label for="imagen-jugador">Imagen: </label>
+    <input id="imagen-jugador" #imagen />
+    <button type="button" class="add-button" (click)="agregarJugador(nombre.value, posicion.value, imagen.value)">
+        Agregar Jugador
+    </button>
+</div>
