@@ -35,8 +35,6 @@ export class JugadoresComponent {
 
   eliminarJugador(id: number): void {
     const index = this.jugadores.findIndex((jugador) => jugador.id === id);
-    if (index !== -1) {
-      this.jugadores.splice(index, 1);
-    }
+    this.jugadores.splice(index, 1);
   }
 }
