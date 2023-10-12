@@ -1,7 +1,7 @@
 <div class="cardContainer">
     <app-jugador *ngFor="let jugador of jugadores" [jugador]="jugador" [routerLink]="['/jugador', jugador.id]"></app-jugador>
 </div>
-<div>   
+<div class="agregar">
     <label for="nuevo-jugador">Nombre Jugador: </label>
     <input id="nuevo-jugador" #nombre />
     <label for="posicion-jugador">Posicion: </label>
