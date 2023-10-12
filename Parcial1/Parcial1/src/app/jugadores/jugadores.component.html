@@ -1,6 +1,10 @@
 <div class="cardContainer">
-    <app-jugador *ngFor="let jugador of jugadores" [jugador]="jugador" [routerLink]="['/jugador', jugador.id]"></app-jugador>
+    <div *ngFor="let jugador of jugadores">
+        <app-jugador [jugador]="jugador" [routerLink]="['/jugador', jugador.id]"></app-jugador>
+        <button (click)="eliminarJugador(jugador.id)">Eliminar Jugador</button>
+    </div>
 </div>
+
 <div class="agregar">
     <label for="nuevo-jugador">Nombre Jugador: </label>
     <input id="nuevo-jugador" #nombre />
