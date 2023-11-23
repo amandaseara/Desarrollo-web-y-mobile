@@ -34,6 +34,13 @@ router.delete('/eliminarPersona', authMiddleware, (req, res) => {
     return res.status(400).json({ error: 'Se requieren nombre y apellido para eliminar una persona.' });
   }
 
+  //Se puede intentar asi
+  const resultados = personas.filter(
+    (persona) =>
+      persona.nombre.toLowerCase() === nombre.toLowerCase() &&
+      persona.apellido.toLowerCase() === apellido.toLowerCase()
+  );
+
   const initialLength = personas.length;
   personas = personas.filter(person => {
     return (
@@ -42,7 +49,7 @@ router.delete('/eliminarPersona', authMiddleware, (req, res) => {
     );
   });
 
-  if (personas.length < initialLength) {
+  if (resultados != null) {
     return res.sendStatus(204); // Indica que se eliminó al menos una persona
   } else {
     return res.status(404).json({ error: 'No se encontró la persona para eliminar.'});
